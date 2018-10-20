@@ -1,0 +1,16 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title>
+      Ionic Blank
+    </ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+  <button ion-button (touchstart)="keyPress(keys.upKey)" (touchend)="keyRelease(keys.upKey)">UP</button>
+  <button ion-button (touchstart)="keyPress(keys.downKey)" (touchend)="keyRelease(keys.downKey)">DOWN</button>
+  <button ion-button (touchstart)="keyPress(keys.rightKey)" (touchend)="keyRelease(keys.rightKey)">RIGHT</button>
+  <button ion-button (touchstart)="keyPress(keys.leftKey)" (touchend)="keyRelease(keys.leftKey)">LEFT</button>
+  <button ion-button (touchstart)="keyPress(keys.fireKey)" (touchend)="keyRelease(keys.fireKey)">FIRE!</button>
+  <button ion-button *ngIf="!connected" (click)="connect()">Try Again!</button>
+</ion-content>
