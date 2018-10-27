@@ -1,14 +1,17 @@
 import { Component } from "@angular/core";
-import { NavController } from "ionic-angular";
+import { NavController, Platform } from "ionic-angular";
 import { Socket } from "ng-socket-io";
+import { ScreenOrientation } from '@ionic-native/screen-orientation';
+
 @Component({
   selector: "page-home",
   templateUrl: "home.html"
 })
 export class HomePage {
   keys: any;
+  joystick:any
   connected: boolean;
-  constructor(public navCtrl: NavController, private socket: Socket) {
+  constructor(public navCtrl: NavController, private socket: Socket,private screen:ScreenOrientation,private platform:Platform) {
     this.keys = {
       upKey: { keyCode: 38 },
       downKey: { keyCode: 40 },
@@ -17,11 +20,13 @@ export class HomePage {
       fireKey: { keyCode: 32 }
     };
     this.connect();
-  }
-
+      if(this.platform.is('mobile')){
+        // this.screen.lock(this.screen.ORIENTATIONS.LANDSCAPE);  
+      }
+    }
+ 
   keyPress(object) {
     console.log("Pressed " + JSON.stringify(object));
-    this.socket.connect();
     this.socket.emit("press", object);
   }
 
