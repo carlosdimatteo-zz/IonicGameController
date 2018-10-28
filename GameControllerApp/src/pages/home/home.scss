@@ -1,0 +1,66 @@
+page-home {
+
+
+    
+    .arrowContainer{
+        position: absolute;
+        top: 41vh;
+        left: 6vw;
+        width: 100px;
+        height: 100px;
+        background-color: transparent;
+        border-radius: 100%;
+    }
+
+    .key{
+        background-color: transparent;
+    width: 55px;
+    height: 55px;
+    font-size: 50px;
+    position: absolute;
+    font-weight: 900;
+    color: gray;
+    border-radius: 100%;
+    border: gray 2px solid;
+    /* opacity: 0; */
+
+    .key:active{
+        background-color:gray !important;
+        color:white;
+        border:white 2px solid !important;
+        border-radius:100%
+    }
+
+    }
+
+    .upKey{
+        top: -4vh;
+        left: 4vw;
+    }
+    .downKey{
+        top: 17vh;
+        left: 4vw;
+    }
+    .rightKey{
+        top: 7vh;
+        left: 10vw;
+    }
+    .leftKey{
+        top: 7vh;
+        left: -2vw;
+    }
+
+    .fireKey{
+        border: gray 2px solid;
+    position: absolute;
+    width: 60px;
+    height: 60px;
+    font-size: 30px;
+    top: 40vh;
+    left: 90vw;
+    color: lightseagreen;
+    border-radius: 100%;
+    }
+
+
+}

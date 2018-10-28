@@ -1,0 +1,12 @@
+
+
+<ion-content padding>
+  <div class="arrowContainer">
+  <button icon-only clear ion-button class="key upKey" (touchstart)="keyPress(keys.upKey)" (touchend)="keyRelease(keys.upKey)"> <ion-icon name="arrow-dropup"></ion-icon> </button>
+  <button icon-only clear ion-button class="key rightKey" (touchstart)="keyPress(keys.rightKey)" (touchend)="keyRelease(keys.rightKey)"><ion-icon name="arrow-dropright"></ion-icon></button>
+  <button icon-only clear ion-button class="key downKey" (touchstart)="keyPress(keys.downKey)" (touchend)="keyRelease(keys.downKey)"><ion-icon name="arrow-dropdown"></ion-icon></button>
+  <button icon-only clear ion-button class="key leftKey" (touchstart)="keyPress(keys.leftKey)" (touchend)="keyRelease(keys.leftKey)"><ion-icon name="arrow-dropleft"></ion-icon></button>
+</div>
+  <button icon-only clear ion-button class="key fireKey" (touchstart)="keyPress(keys.fireKey)" (touchend)="keyRelease(keys.fireKey)"><ion-icon name="flame"></ion-icon></button>
+  <button ion-button *ngIf="!connected" (click)="connect()">Try Again!</button>
+</ion-content>
